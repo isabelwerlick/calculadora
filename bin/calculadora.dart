@@ -24,14 +24,27 @@ void main() {
   String? entrada = stdin.readLineSync();
   if (entrada != null) {
     if (entrada != "") {
-      numeroUm = double.parse(
-        entrada,      ); //08 Tratando erros de código no Dart - 7:31//
+      numeroUm = double.parse(entrada);
     }
   }
 
+  
+  entrada = stdin.readLineSync();
+  if (entrada != null) {
+    if (entrada != "") {
+      numeroDois = double.parse(entrada);
+    }
+  }
+
+  entrada = stdin.readLineSync();
+  if (entrada != null) {
+    operacao = entrada;
+
+  }
+  
   switch (operacao) {
     case "+":
-      soma;
+      soma();
 
     case "-":
       subtracao();
