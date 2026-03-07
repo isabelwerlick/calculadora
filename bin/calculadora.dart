@@ -21,6 +21,25 @@ void main() {
     print('Divisão: ${numeroUm / numeroDois}');
   }
 
+  void calcular() {
+    switch (operacao) {
+      case "+":
+        soma();
+
+      case "-":
+        subtracao();
+
+      case "*":
+        multiplicacao();
+
+      case "/":
+        divisao();
+        break; //significa encerrar o switch, caso contrário ele continuaria executando os próximos cases mesmo que a operação seja diferente//
+    }
+  }
+
+  print("Digite o primeiro valor");
+
   String? entrada = stdin.readLineSync();
   if (entrada != null) {
     if (entrada != "") {
@@ -28,7 +47,15 @@ void main() {
     }
   }
 
-  
+  print("Digite uma operação");
+
+  entrada = stdin.readLineSync();
+  if (entrada != null) {
+    operacao = entrada;
+  }
+
+  print("Digite o segundo valor");
+
   entrada = stdin.readLineSync();
   if (entrada != null) {
     if (entrada != "") {
@@ -36,24 +63,5 @@ void main() {
     }
   }
 
-  entrada = stdin.readLineSync();
-  if (entrada != null) {
-    operacao = entrada;
-
-  }
-  
-  switch (operacao) {
-    case "+":
-      soma();
-
-    case "-":
-      subtracao();
-
-    case "*":
-      multiplicacao();
-
-    case "/":
-      divisao();
-      break; //significa encerrar o switch, caso contrário ele continuaria executando os próximos cases mesmo que a operação seja diferente//
-  }
+  calcular();
 }
