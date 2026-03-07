@@ -1,9 +1,9 @@
 import 'dart:io';
 
 void main() {
-  double numeroUm = double.parse(stdin.readLineSync()!);
-  double numeroDois = double.parse(stdin.readLineSync()!);
-  String operacao = stdin.readLineSync()!;
+  double numeroUm = 0;
+  double numeroDois = 0;
+  String operacao = "";
 
   void soma() {
     print('Soma: ${numeroUm + numeroDois}');
@@ -19,6 +19,14 @@ void main() {
 
   void divisao() {
     print('Divisão: ${numeroUm / numeroDois}');
+  }
+
+  String? entrada = stdin.readLineSync();
+  if (entrada != null) {
+    if (entrada != "") {
+      numeroUm = double.parse(
+        entrada,      ); //08 Tratando erros de código no Dart - 7:31//
+    }
   }
 
   switch (operacao) {
