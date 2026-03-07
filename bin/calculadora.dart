@@ -47,6 +47,14 @@ void main() {
     }
   }
 
+  void getOperacao() {
+    print("Digite uma operação");
+    entrada = stdin.readLineSync();
+    if (entrada != null) {
+      /////////////////////////////////////////////
+    }
+  }
+
   print("Digite uma operação");
 
   entrada = stdin.readLineSync();
@@ -63,8 +71,7 @@ void main() {
     }
   }
 
-
-print("O resultado da operação é:");  
+  print("O resultado da operação é:");
 
   calcular();
 }
