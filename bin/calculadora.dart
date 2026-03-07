@@ -76,4 +76,4 @@ void main() {
   calcular();
 }
 
-// aula 04//
+// aula 04// para a próxima aula, vamos criar uma calculadora, onde o usuário irá digitar dois números e a operação que deseja realizar, e o programa irá mostrar o resultado da operação.
