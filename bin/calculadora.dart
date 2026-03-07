@@ -21,22 +21,6 @@ void main() {
     print('Divisão: ${numeroUm / numeroDois}');
   }
 
-  if (operacao == '+') {
-    soma();
-  } else {
-    if (operacao == '-') {
-      subtracao();
-    } else {
-      if (operacao == '*') {
-        multiplicacao();
-      } else {
-        if (operacao == '/') {
-          divisao();
-        }
-      }
-    }
-  }
-
   switch (operacao) {
     case "+":
       soma;
