@@ -37,18 +37,18 @@ void main() {
     }
   }
 
-  switch(operacao){
+  switch (operacao) {
     case "+":
-    soma;
+      soma;
 
-    case "-": 
-    subtracao();
+    case "-":
+      subtracao();
 
     case "*":
-    multiplicacao();
+      multiplicacao();
 
     case "/":
-    divisao();
-    break;
+      divisao();
+      break; //significa encerrar o switch, caso contrário ele continuaria executando os próximos cases mesmo que a operação seja diferente//
   }
 }
