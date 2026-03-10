@@ -4,6 +4,8 @@ void main() {
   double numeroUm = 0;
   double numeroDois = 0;
   String operacao = "";
+  String? entrada = "";
+  List<String> operacoes = <String>["+", "-", "*", "/"];
 
   void soma() {
     print('Soma: ${numeroUm + numeroDois}');
@@ -25,12 +27,15 @@ void main() {
     switch (operacao) {
       case "+":
         soma();
+        break;
 
       case "-":
         subtracao();
+        break;
 
       case "*":
         multiplicacao();
+        break;
 
       case "/":
         divisao();
@@ -38,36 +43,32 @@ void main() {
     }
   }
 
-  print("Digite o primeiro valor");
-
-  String? entrada = stdin.readLineSync();
-  if (entrada != null) {
-    if (entrada != "") {
-      numeroUm = double.parse(entrada);
-    }
-  }
-
   void getOperacao() {
     print("Digite uma operação");
     entrada = stdin.readLineSync();
     if (entrada != null) {
-      /////////////////////////////////////////////
+      if (operacoes.contains(entrada)) {
+        operacao = entrada!;
+      }
     }
   }
 
-  print("Digite uma operação");
-
+  print("Digite o primeiro valor");
   entrada = stdin.readLineSync();
   if (entrada != null) {
-    operacao = entrada;
+    if (entrada != "") {
+      numeroUm = double.parse(entrada!);
+    }
   }
+getOperacao();
+
 
   print("Digite o segundo valor");
 
   entrada = stdin.readLineSync();
   if (entrada != null) {
     if (entrada != "") {
-      numeroDois = double.parse(entrada);
+      numeroDois = double.parse(entrada!);
     }
   }
 
@@ -76,4 +77,3 @@ void main() {
   calcular();
 }
 
-// aula 04// para a próxima aula, vamos criar uma calculadora, onde o usuário irá digitar dois números e a operação que deseja realizar, e o programa irá mostrar o resultado da operação.
