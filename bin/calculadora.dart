@@ -80,3 +80,5 @@ getOperacao();
   calcular();
 }
 
+// Nessa aula, você aprendeu como:Criar listas que contém operações possível para a calculadora;Utilizar funções de listas para validar se um valor existe dentro de listas;Utilizar recursividade para permitir que a pessoa usuária tenha mais uma chance de colocar uma opção válida.Mais uma etapa vencida.//
+
